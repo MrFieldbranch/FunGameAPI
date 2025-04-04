@@ -1,0 +1,6 @@
+@FunGameAPI_HostAddress = http://localhost:5134
+
+GET {{FunGameAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
