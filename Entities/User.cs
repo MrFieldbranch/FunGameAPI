@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace FunGameAPI.Entities
 {
@@ -8,10 +9,13 @@ namespace FunGameAPI.Entities
     {
         public int Id { get; set; }
 
+        [MaxLength(30)]
         public required string Nickname { get; set; }
 
+        [MaxLength(50)]
         public required string Email { get; set; }
 
+        [MaxLength(50)]
         public required string Password { get; set; }
 
         public int NumberOfGames { get; set; } = 0;
