@@ -17,17 +17,65 @@ namespace FunGameAPI.Controllers
         [HttpGet("nicknamesascending")]
         public async Task<ActionResult<List<UserResponse>>> GetNicknamesAscending()
         {
-            var nicknames = await _userService.GetNicknamesAscendingAsync();
+            var users = await _userService.GetNicknamesAscendingAsync();
 
-            return Ok(nicknames);
+            return Ok(users);
         }
 
         [HttpGet("nicknamesdescending")]
         public async Task<ActionResult<List<UserResponse>>> GetNicknamesDescending()
         {
-            var nicknames = await _userService.GetNicknamesDescendingAsync();
+            var users = await _userService.GetNicknamesDescendingAsync();
 
-            return Ok(nicknames);
+            return Ok(users);
+        }
+
+        [HttpGet("numberofgamesascending")]
+        public async Task<ActionResult<List<UserResponse>>> GetNumberOfGamesAscending()
+        {
+            var users = await _userService.GetNumberOfGamesAscendingAsync();
+
+            return Ok(users);
+        }
+
+        [HttpGet("numberofgamesdescending")]
+        public async Task<ActionResult<List<UserResponse>>> GetNumberOfGamesDescending()
+        {
+            var users = await _userService.GetNumberOfGamesDescendingAsync();
+
+            return Ok(users);
+        }
+
+        [HttpGet("numberofwinsascending")]
+        public async Task<ActionResult<List<UserResponse>>> GetNumberOfWinsAscending()
+        {
+            var users = await _userService.GetNumberOfWinsAscendingAsync();
+
+            return Ok(users);
+        }
+
+        [HttpGet("numberofwinsdescending")]
+        public async Task<ActionResult<List<UserResponse>>> GetNumberOfWinsDescending()
+        {
+            var users = await _userService.GetNumberOfWinsDescendingAsync();
+
+            return Ok(users);
+        }
+
+        [HttpGet("winpercentascending")]
+        public async Task<ActionResult<List<UserResponse>>> GetWinPercentAscending()
+        {
+            var users = await _userService.GetWinPercentAscendingAsync();
+
+            return Ok(users);
+        }
+
+        [HttpGet("winpercentdescending")]
+        public async Task<ActionResult<List<UserResponse>>> GetWinPercentDescending()
+        {
+            var users = await _userService.GetWinPercentDescendingAsync();
+
+            return Ok(users);
         }
 
         [HttpPost]

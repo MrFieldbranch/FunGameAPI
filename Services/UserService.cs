@@ -15,7 +15,7 @@ namespace FunGameAPI.Services
 
         public async Task<List<UserResponse>> GetNicknamesAscendingAsync()
         {
-            var nicknames = await _context.Users
+            var users = await _context.Users
                 .OrderBy(u => u.Nickname)
                 .Select(u => new UserResponse
                 {
@@ -25,7 +25,7 @@ namespace FunGameAPI.Services
                     NumberOfWins = u.NumberOfWins
                 }).ToListAsync();
 
-            return nicknames ?? [];
+            return users ?? [];
         }
 
         public async Task<List<UserResponse>> GetNicknamesDescendingAsync()
