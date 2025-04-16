@@ -14,7 +14,7 @@
                 if (NumberOfGames == 0)
                     return 0;
                 
-                return ((double)NumberOfWins / NumberOfGames) * 100;
+                return Math.Round((double)NumberOfWins / NumberOfGames * 100, 2);
             }
         }
     }
