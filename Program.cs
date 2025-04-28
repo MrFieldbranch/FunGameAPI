@@ -52,7 +52,7 @@ var app = builder.Build();
 
 app.UseCors("AllowSpecificOrigins");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
